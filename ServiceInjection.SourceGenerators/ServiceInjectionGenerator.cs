@@ -101,7 +101,7 @@ namespace ServiceInjection.SourceGenerators
             builder.AppendLine(string.Join("\n", usings));
             builder.AppendLine($"namespace {projectName} {{");
             builder.AppendLine("public static class ServiceInjectionExtension {");
-            builder.AppendLine("public static void AddServiceInjection(this ServiceCollection services) {");
+            builder.AppendLine("public static void AddServiceInjection(this IServiceCollection services) {");
             foreach (var service in services)
             {
                 builder.AppendLine(service.ToString());
